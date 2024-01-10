@@ -189,7 +189,7 @@ def selectPhotons(photons):
     )
 
     # select tightPhotons, the subset of photons passing the photonSelect cut and the photonID cut
-    tightPhotons = photons[photonSelect & (photons.cutBased >= 4)]  # FIXME 1a FIXED
+    tightPhotons = photons[photonSelect & (photons.cutBased >= 3)]  # FIXME 1a FIXED
     # select loosePhotons, the subset of photons passing the photonSelect cut and all photonID cuts
     # except the charged hadron isolation cut applied (photonID_NoChIso)
     loosePhotons = photons[photonSelect & (photons.cutBased >= 1)  & photonID_NoChIso]  # FIXME 1a FIXED?
